@@ -224,6 +224,8 @@ async def search_offers(conn, scenario: str | None = None, service_type: str | N
         m = m or {}
         d["media"] = m.get("media")            # v0.2 image-led cards (UX-FR-IMG)
         d["product_code"] = m.get("product_code")
+        d["qualifiers"] = m.get("qualifiers")  # v0.3 eligibility qualifiers (FR-QUAL)
+        d["tnc"] = m.get("tnc")                # v0.3 simple T&C (FR-TNC)
         out.append(d)
     return out
 
