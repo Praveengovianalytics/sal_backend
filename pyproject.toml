@@ -1,0 +1,19 @@
+[project]
+name = "sal-backend"
+version = "0.1.0"
+description = "SAL backend — core services + MCP layer over the PostgreSQL Customer Intelligence Cube"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.111",
+    "uvicorn[standard]>=0.30",
+    "asyncpg>=0.29",
+    "redis>=5.0",
+    "pydantic>=2.7",
+    "pydantic-settings>=2.3",
+    "aiokafka>=0.11",       # Phase 4 event backbone (Kafka/Redpanda)
+    "pymilvus>=2.4",        # Phase 4 vector RAG (Milvus client)
+    "milvus-lite>=2.4",     # embedded, file-backed Milvus for local dev
+]
+
+[tool.uv]
+package = false

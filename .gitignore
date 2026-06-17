@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.pytest_cache/
+# Milvus Lite local store (v0.2 RAG) — regenerated at startup
+sal_milvus.db/
+*.db-shm
+*.db-wal
+.DS_Store
